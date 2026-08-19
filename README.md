@@ -8,7 +8,6 @@ This repository contains the complete source code, JSON signal mapping profiles,
 Integrated CAN-Bus System: A Software-Defined Multi-Threaded Instrument Cluster and Open Observability Telemetry Architecture for Vehicle Performance Optimization (MDPI Electronics, 2026).
 
 Key Features:
-        
         Deterministic Multi-Threaded Engine: Python 3.11 runtime isolating high-rate SocketCAN ingestion, MCP3008 ADC sampling, NEO-6M GNSS parsing, UI rendering, and database logging.
         Kernel-Level CAN Interface: Uses Linux SocketCAN (mcp251x kernel driver) at 500 kbps to guarante no frame loss.
         Adaptive UI Queue Throttling: Non-blocking Tkinter consumer loop throttled to max 25 queued updates per 20ms cycle, guaranteeing a stable 50 FPS rendering rate under heavy bus loads.
