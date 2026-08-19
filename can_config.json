@@ -1,0 +1,448 @@
+{
+    "parameters": {
+        "Speed": {
+            "can_id": 1000,
+            "index": 8,
+            "start_bit": 32,
+            "byte_order": "LSB",
+            "type": "UInt16",
+            "adj_factor": "raw*0.1",
+            "limit_low": 0.0,
+            "limit_high": 300.0
+        },
+        "RPM": {
+            "can_id": 1000,
+            "index": 0,
+            "start_bit": 0,
+            "byte_order": "LSB",
+            "type": "UInt16",
+            "adj_factor": "raw",
+            "limit_low": 0.0,
+            "limit_high": 9000.0
+        },
+        "ECT": {
+            "can_id": 1000,
+            "index": 2,
+            "start_bit": 32,
+            "byte_order": "LSB",
+            "type": "UInt16",
+            "adj_factor": "raw-50",
+            "limit_low": 0.0,
+            "limit_high": 120.0
+        },
+        "IAT": {
+            "can_id": 1000,
+            "index": 3,
+            "start_bit": 0,
+            "byte_order": "LSB",
+            "type": "UInt16",
+            "adj_factor": "raw-50",
+            "limit_low": -20.0,
+            "limit_high": 100.0
+        },
+        "Oil Temp": {
+            "can_id": 1000,
+            "index": 8,
+            "start_bit": 0,
+            "byte_order": "LSB",
+            "type": "UInt16",
+            "adj_factor": "raw-50",
+            "limit_low": 10.0,
+            "limit_high": 130.0
+        },
+        "Oil Press": {
+            "can_id": 1000,
+            "index": 8,
+            "start_bit": 16,
+            "byte_order": "LSB",
+            "type": "UInt16",
+            "adj_factor": "raw",
+            "limit_low": 100.0,
+            "limit_high": 800.0
+        },
+        "Boost": {
+            "can_id": 1000,
+            "index": 0,
+            "start_bit": 32,
+            "byte_order": "LSB",
+            "type": "UInt16",
+            "adj_factor": "raw-100",
+            "limit_low": -90.0,
+            "limit_high": 130.0
+        },
+        "TPS": {
+            "can_id": 1000,
+            "index": 1,
+            "start_bit": 16,
+            "byte_order": "LSB",
+            "type": "UInt16",
+            "adj_factor": "raw*0.1",
+            "limit_low": 0.0,
+            "limit_high": 100.0
+        },
+        "AFR": {
+            "can_id": 384,
+            "index": null,
+            "start_bit": 0,
+            "byte_order": "MSB",
+            "type": "UInt16",
+            "adj_factor": "raw*0.0001*14.7",
+            "limit_low": 10.0,
+            "limit_high": 200.0
+        },
+        "Volt": {
+            "can_id": 1000,
+            "index": 3,
+            "start_bit": 16,
+            "byte_order": "LSB",
+            "type": "UInt16",
+            "adj_factor": "raw*0.01",
+            "limit_low": 11.0,
+            "limit_high": 15.2
+        },
+        "Gear": {
+            "can_id": 1000,
+            "index": 4,
+            "start_bit": 0,
+            "byte_order": "LSB",
+            "type": "UInt16",
+            "adj_factor": "raw",
+            "limit_low": 0.0,
+            "limit_high": 6.0
+        },
+        "Fuel Press": {
+            "can_id": 1000,
+            "index": 7,
+            "start_bit": 32,
+            "byte_order": "LSB",
+            "type": "UInt16",
+            "adj_factor": "raw",
+            "limit_low": 0.0,
+            "limit_high": 500.0
+        },
+        "Inj DC": {
+            "can_id": 1000,
+            "index": 1,
+            "start_bit": 32,
+            "byte_order": "LSB",
+            "type": "UInt16",
+            "adj_factor": "raw*0.1",
+            "limit_low": 0.0,
+            "limit_high": 85.0
+        },
+        "Ign Tim": {
+            "can_id": 1000,
+            "index": 4,
+            "start_bit": 32,
+            "byte_order": "LSB",
+            "type": "UInt16",
+            "adj_factor": "(raw*0.1)-100",
+            "limit_low": -10.0,
+            "limit_high": 40.0
+        },
+        "Limit_Flags": {
+            "can_id": 1000,
+            "index": 12,
+            "start_bit": 32,
+            "byte_order": "LSB",
+            "type": "UInt16",
+            "adj_factor": "raw",
+            "limit_low": 0.0,
+            "limit_high": 65535.0
+        },
+        "ECU_Fault": {
+            "can_id": 1000,
+            "index": 7,
+            "start_bit": 16,
+            "byte_order": "LSB",
+            "type": "UInt16",
+            "adj_factor": "raw",
+            "limit_low": 0.0,
+            "limit_high": 65535.0
+        }
+    },
+    "inputs": {
+        "odometer": 100241.85,
+        "channels": {
+            "0": {
+                "enabled": true,
+                "name": "Fuel Main",
+                "unit": "%",
+                "min_v": 0.3,
+                "mid_v": 1.4,
+                "max_v": 2.5,
+                "min_val": 95.0,
+                "mid_val": 50.0,
+                "max_val": 5.0
+            },
+            "1": {
+                "enabled": true,
+                "name": "Fuel Sub",
+                "unit": "%",
+                "min_v": 0.2,
+                "mid_v": 1.3,
+                "max_v": 2.5,
+                "min_val": 95.0,
+                "mid_val": 50.0,
+                "max_val": 6.0
+            },
+            "2": {
+                "enabled": true,
+                "name": "CH2",
+                "unit": "\u00b0C",
+                "min_v": 0.1,
+                "mid_v": 2.0,
+                "max_v": 3.0,
+                "min_val": 0.0,
+                "mid_val": 50.0,
+                "max_val": 100.0
+            },
+            "3": {
+                "enabled": false,
+                "name": "CH3",
+                "unit": "",
+                "min_v": 0.0,
+                "mid_v": 1.6,
+                "max_v": 3.0,
+                "min_val": 0.0,
+                "mid_val": 50.0,
+                "max_val": 100.0
+            },
+            "4": {
+                "enabled": false,
+                "name": "CH4",
+                "unit": "",
+                "min_v": 0.0,
+                "mid_v": 1.6,
+                "max_v": 3.0,
+                "min_val": 0.0,
+                "mid_val": 50.0,
+                "max_val": 100.0
+            },
+            "5": {
+                "enabled": false,
+                "name": "CH5",
+                "unit": "",
+                "min_v": 0.0,
+                "mid_v": 1.6,
+                "max_v": 3.0,
+                "min_val": 0.0,
+                "mid_val": 50.0,
+                "max_val": 100.0
+            },
+            "6": {
+                "enabled": false,
+                "name": "CH6",
+                "unit": "",
+                "min_v": 0.0,
+                "mid_v": 1.6,
+                "max_v": 3.0,
+                "min_val": 0.0,
+                "mid_val": 50.0,
+                "max_val": 100.0
+            },
+            "7": {
+                "enabled": false,
+                "name": "CH7",
+                "unit": "",
+                "min_v": 0.0,
+                "mid_v": 1.6,
+                "max_v": 3.0,
+                "min_val": 0.0,
+                "mid_val": 50.0,
+                "max_val": 100.0
+            }
+        },
+        "adc_to_ecu_enabled": false
+    },
+    "warnings": {
+        "traction": {
+            "mode": "stream",
+            "can_id": 420,
+            "start_bit": 19,
+            "type": "Bit",
+            "byte_order": "MSB",
+            "index": null
+        },
+        "lowfuel": {
+            "mode": "if/else",
+            "signal": "Fuel Level",
+            "operator": "<",
+            "value": 10.0,
+            "or_signal": null,
+            "or_operator": null,
+            "or_value": null
+        },
+        "check": {
+            "mode": "if/else",
+            "signal": "Limit Flags",
+            "operator": ">",
+            "value": 0.0,
+            "or_signal": "ECU_Fault",
+            "or_operator": ">",
+            "or_value": 0.0
+        },
+        "abs": {
+            "mode": "stream",
+            "can_id": 530,
+            "start_bit": 68,
+            "type": "Bit",
+            "byte_order": "MSB",
+            "index": null
+        },
+        "airbag": {
+            "mode": "digital",
+            "channel": "ch4",
+            "logic": "Inverted",
+            "pull": "UP"
+        },
+        "steering": {
+            "mode": "stream",
+            "can_id": 768,
+            "start_bit": 7,
+            "type": "Bit",
+            "byte_order": "MSB",
+            "index": null
+        },
+        "oil": {
+            "mode": "if/else",
+            "signal": "Oil Press",
+            "operator": "<",
+            "value": 100.0,
+            "or_signal": "Oil Temp",
+            "or_operator": ">",
+            "or_value": 105.0
+        },
+        "battery": {
+            "mode": "stream",
+            "can_id": 1000,
+            "start_bit": 63,
+            "type": "UInt16",
+            "byte_order": "LSB",
+            "index": null
+        },
+        "temp": {
+            "mode": "if/else",
+            "signal": "ECT",
+            "operator": ">",
+            "value": 100.0,
+            "or_signal": null,
+            "or_operator": null,
+            "or_value": null
+        },
+        "doors": {
+            "mode": "stream",
+            "can_id": 0,
+            "start_bit": 0,
+            "type": "Uint8",
+            "byte_order": "MSB",
+            "index": null
+        },
+        "seatbelt": {
+            "mode": "digital",
+            "channel": "ch2",
+            "logic": "Normal",
+            "pull": "UP"
+        },
+        "ebrake": {
+            "mode": "digital",
+            "channel": "ch1",
+            "logic": "Inverted",
+            "pull": "DOWN"
+        }
+    },
+    "display": {
+        "columns": {
+            "left": {
+                "mode": "6small",
+                "tiles": [
+                    {
+                        "type": "small",
+                        "signal": "IAT"
+                    },
+                    {
+                        "type": "small",
+                        "signal": "ECT"
+                    },
+                    {
+                        "type": "small",
+                        "signal": "Oil Press"
+                    },
+                    {
+                        "type": "small",
+                        "signal": "Oil Temp"
+                    },
+                    {
+                        "type": "small",
+                        "signal": "ECU_Fault"
+                    },
+                    {
+                        "type": "small",
+                        "signal": "Limit_Flags"
+                    }
+                ]
+            },
+            "middle": {
+                "mode": "2big",
+                "tiles": [
+                    {
+                        "type": "big",
+                        "signal": "G_Speed"
+                    },
+                    {
+                        "type": "big",
+                        "signal": "Boost"
+                    }
+                ]
+            },
+            "right": {
+                "mode": "6small",
+                "tiles": [
+                    {
+                        "type": "small",
+                        "signal": "AFR"
+                    },
+                    {
+                        "type": "small",
+                        "signal": "EGT"
+                    },
+                    {
+                        "type": "small",
+                        "signal": "Ign Tim"
+                    },
+                    {
+                        "type": "small",
+                        "signal": "Inj DC"
+                    },
+                    {
+                        "type": "small",
+                        "signal": "Gear"
+                    },
+                    {
+                        "type": "split",
+                        "signal1": "Volt",
+                        "signal2": "Odometer"
+                    }
+                ]
+            }
+        }
+    },
+    "limit_definitions": {
+        "0": "RPM Limit",
+        "1": "MAP Limit",
+        "2": "Speed Limit",
+        "3": "Maximum Ignition Flag",
+        "4": "Anti-lag Ignition Cut",
+        "5": "High Supply Voltage Limit",
+        "6": "Overrun Flag",
+        "7": "Traction Limit",
+        "8": "Low Supply Voltage Flag",
+        "9": "Launch RPM Limit",
+        "10": "Wakeup Flag",
+        "11": "GP RPM Limit 1",
+        "12": "CL Stepper Limit",
+        "13": "GP RPM Limit 2",
+        "14": "EThrottle Limit",
+        "15": "Cyclic Idle Active"
+    }
+}
