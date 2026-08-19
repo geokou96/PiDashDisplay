@@ -17,3 +17,9 @@ Key Features:
         Onboard Observability Stack: Local MariaDB relational TSDB storing sensor logs in daily partitioned tables (sensor_log_YYYYMMDD) with batched SQL commits (200rows/ 50ms), queried live by Grafana via local HTTP.
         Automated Kinematics & Lap Timer: Haversine formula GPS lap timer (12m radius target) and real-time speed cross-validation reporting V_{error} RMSE (1.84 km/h).
         Hardware Signal Isolation & Safe Shutdown: Optocoupler level-shifting (OP71A04), diode multiplexing (1N4007), and ACC-triggered delayed shutdown relay protecting file system integrity.
+
+## License & Affiliation
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+Developed at the **Department of Electrical and Computer Engineering, University of Peloponnese**.
