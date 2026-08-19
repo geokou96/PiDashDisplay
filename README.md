@@ -1,6 +1,5 @@
-DashDisplay
+DashDisplay: Software-Defined Automotive Instrument Cluster & Open Telemetry Architecture
 
-Software-Defined Automotive Instrument Cluster & Open Telemetry Architecture
 DashDisplay is a low-cost, software-defined automotive instrument cluster and real-time telemetry platform built on a Raspberry Pi 4. Designed to bridge standalone ECUs (e.g., Link G4+) with heterogeneous OEM chassis electronics (e.g., Mazda RX-8 with swapped Nissan SR20DET powertrain), 
 it provides real-time driver visualization, digital signal isolation, active CAN-bus sensor expansion, and an onboard time-series database (TSDB) paired with an embedded Grafana observability stack.
 
