@@ -1,3 +1,13 @@
+# =============================================================================
+# DashDisplay: Software-Defined Automotive Instrument Cluster
+#
+# Developed at the Department of Electrical and Computer Engineering,
+# University of Peloponnese.
+#
+# Copyright (c) 2026 Georgios Kourtis, Paris Kitsos
+# Licensed under the MIT License.
+# =============================================================================
+
 import tkinter as tk
 from tkinter import ttk  # Add this for dropdowns
 from tkinter import messagebox
