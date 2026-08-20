@@ -1871,7 +1871,7 @@ class CanDashboard:
                                     elif dist >= 15:
                                         self.last_position_crossed = False
 
-                        time.sleep(0.02)
+                        time.sleep(0.05)
             except Exception as e:
                 print(f"❌ GPS Thread disconnect: {e}")
                 self.gps_socket = None
